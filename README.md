@@ -1,37 +1,22 @@
-# TikTok Made Me Buy It – Ürün Arama
+# TikTok Made Me Buy It – Ürün Tarayıcı
 
-TikTok'taki **#TikTokMadeMeBuyIt** trendindeki ürünleri keşfetmek için Flask tabanlı web uygulaması.
+Telefon tarayıcısından açılabilen, TikTok trend ürünlerini otomatik tarayan PWA.
 
-## Kurulum
-
-```bash
-pip install -r requirements.txt
-playwright install chromium
-```
-
-## Yapılandırma
+## Vercel Deploy (Ücretsiz)
 
 ```bash
-cp .env.example .env
-# .env dosyasını düzenleyip MS_TOKEN değerini girin
+npm i -g vercel
+vercel --prod
 ```
 
-**MS_TOKEN nasıl alınır?**
-1. Tarayıcıda `https://www.tiktok.com` adresini açın
-2. `F12` → *Application* → *Cookies* → *tiktok.com*
-3. `msToken` çerezini bulup değerini kopyalayın
+Vercel sana bir URL verecek (örn. `https://tiktok-urunler.vercel.app`).
+O URL'yi telefonunda aç, ana ekrana ekle — uygulama gibi çalışır.
 
-## Çalıştırma
+## Özellikler
 
-```bash
-python app.py
-```
-
-Tarayıcıda `http://localhost:5000` adresini açın.
-
-## API Uç Noktaları
-
-| Uç Nokta | Parametre | Açıklama |
-|---|---|---|
-| `GET /api/hashtag` | `tag`, `count` | Hashtag videolarını getirir |
-| `GET /api/search` | `q`, `count` | Anahtar kelimeyle arar |
+- Otomatik tarama (her 30 dakikada bir)
+- Manuel "Tara" butonu
+- Bu Hafta / Bu Ay / 4 Ay filtreleri
+- Ürünlere TikTok'ta bakma linki
+- Önbellek (internet kesilince son sonuçları gösterir)
+- Ana ekrana eklenebilir (PWA)

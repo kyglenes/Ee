@@ -1,4 +1,0 @@
-flask>=3.0.0
-TikTokApi>=6.4.0
-playwright>=1.44.0
-python-dotenv>=1.0.0
